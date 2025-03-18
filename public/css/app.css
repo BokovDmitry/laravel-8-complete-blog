@@ -39039,6 +39039,31 @@ video {
   animation: bounce 1s infinite;
 }
 
+/*CSS class for background imaage for About Us page*/
+/* .background-image-aboutus {
+  position: relative;
+  background-image: url('https://images.pexels.com/photos/159204/game-controller-joystick-joypad-gamepad-159204.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  object-fit: cover;
+  filter: brightness(50%);
+} */
+
+.aboutus-container {
+  position: relative;
+  background-image: url('https://images.pexels.com/photos/194511/pexels-photo-194511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  width : 100vw;
+  height : 600px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  object-fit: cover;
+}
+
+
 .background-image {
   position: relative;
   background-image: url('https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg');

@@ -5,7 +5,7 @@
         <div class="flex text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
                 <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
-                    Do you want to become a developer?
+                    Level Up Your Passion for Gaming!
                 </h1>
                 <a 
                     href="/blog"
@@ -18,46 +18,49 @@
 
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" width="700" alt="">
+            <img src="https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg" width="700" alt="">
         </div>
 
         <div class="m-auto sm:m-auto text-left w-4/5 block">
             <h2 class="text-3xl font-extrabold text-gray-600">
-                Struggling to be a better web developer?
+                Wanna be aware of all gaming news?
             </h2>
             
             <p class="py-8 text-gray-500 text-s">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+                Or just wanna discuus a tough boss?
             </p>
 
             <p class="font-extrabold text-gray-600 text-s pb-9">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam vero nostrum! Perferendis eos molestias porro vero. Vel alias.
+                Awards, New releases, Big Scandals, Global Gaming News and mucc much more here! 
             </p>
 
             <a 
                 href="/blog"
-                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+                class="uppercase bg-purple text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
                 Find Out More
             </a>
         </div>
     </div>
 
-    <div class="text-center p-15 bg-black text-white">
+    <div class="text-center p-15 bg-dark-purple text-white">
         <h2 class="text-2xl pb-5 text-l"> 
-            I'm an expert in...
+            We Have:
         </h2>
 
         <span class="font-extrabold block text-4xl py-1">
-            Ux Design
+            Oncomming Releases
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Project Management
+            Big Scandals
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Digital Strategy
+            Speedrun Records
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Backend Development
+            Game Reviews
+        </span>
+        <span class="font-extrabold block text-4xl py-1">
+            Friendly Small Talks
         </span>
     </div>
 

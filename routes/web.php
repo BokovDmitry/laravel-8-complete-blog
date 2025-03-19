@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\MyPostsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +32,6 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->nam
 Route::get('/about', function () {
     return view('aboutus');
 })->name('about');
+
+Route::get('/myposts', [MyPostsController::class, 'index'])->name('myposts')->middleware('auth');
 

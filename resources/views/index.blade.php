@@ -79,22 +79,33 @@
     </div>
 
     <div class="sm:grid grid-cols-2 w-4/5 m-auto">
-        <div class="flex bg-yellow-700 text-gray-100 pt-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
-                <span class="uppercase text-xs">
-                    PHP
-                </span>
+        <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
+            @if ($recentPosts->isEmpty())
+                <p class="text-gray-600">No recent posts available.</p>
+            @else
+                @foreach ($recentPosts as $post)
+                    <div class="flex flex-col justify-center bg-gray-300 p-2 rounded-lg">
+                        <img 
+                        src="{{ asset('images/' . $post->image_path) }}" 
+                        alt="{{ $post->title }}" 
+                        class="w-full h-64 object-cover rounded-lg mb-4">
 
-                <h3 class="text-xl font-bold py-10">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas necessitatibus dolorum error culpa laboriosam. Enim voluptas earum repudiandae consequuntur ad? Expedita labore aspernatur facilis quasi ex? Nemo hic placeat et?
-                </h3>
-
-                <a 
-                    href=""
-                    class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
-                    Find Out More
-                </a>
-            </div>
+                        <h3 class="text-xl font-bold py-4">
+                            {{ $post->title }}
+                        </h3>
+        
+                        <p class="text-gray-600">
+                            {{ $post->description, 100 }}
+                        </p>
+        
+                        <a 
+                            href="/blog/{{ $post->slug }}"
+                            class="uppercase bg-blue-500 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl mt-8 hover:bg-blue-600 text-center">
+                            Find Out More
+                        </a>
+                    </div>
+                @endforeach
+            @endif
         </div>
         <div>
             <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="">

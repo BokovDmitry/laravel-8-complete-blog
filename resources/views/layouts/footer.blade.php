@@ -7,25 +7,40 @@
 
             <ul class="py-4 sm:text-s pt-4 text-gray-400">
                 <li class="pb-1">
-                    <a href="/">
+                    <a href="/" class="hover:underline hover:text-white">
                         Home
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/blog">
+                    <a href="/blog" class="hover:underline hover:text-white">
                         Blog
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/login">
-                        Login
+                    <a href="/about" class="hover:underline hover:text-white">
+                        About Us
                     </a>
                 </li>
-                <li class="pb-1">
-                    <a href="/register">
-                        Register
-                    </a>
-                </li>
+                @guest
+    <li class="pb-1">
+        <a href="/login" class="hover:underline hover:text-white">
+            Login
+        </a>
+    </li>
+    <li class="pb-1">
+        <a href="/register" class="hover:underline hover:text-white">
+            Register
+        </a>
+    </li>
+@endguest
+
+@auth
+    <li class="pb-1">
+        <a href="/myposts" class="hover:underline hover:text-white">
+            My Posts
+        </a>
+    </li>
+@endauth
             </ul>
         </div>
 

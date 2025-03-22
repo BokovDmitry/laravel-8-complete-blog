@@ -7,19 +7,24 @@
             {{ $post->title }}
         </h1>
     </div>
-</div>
-
-<div class="w-4/5 m-auto pt-20">
     <span class="text-gray-500">
         By <span class="font-bold italic text-gray-800">{{ $post->user->name }}</span>, Created on {{ date('jS M Y', strtotime($post->updated_at)) }}
     </span>
+</div>
 
-    <p class="text-xl text-gray-700 pt-8 pb-10 leading-8 font-light">
+<div class="w-4/5 m-auto pt-20">
+
+    <img 
+        src="{{ asset('images/' . $post->image_path) }}" 
+        alt="{{ $post->title }}" 
+        class="float-left w-1/2 h-auto mr-4 mb-4 rounded-lg object-cover">
+
+    <p class="text-xl text-gray-700 pb-10 leading-8 font-light">
         {{ $post->description }}
     </p>
 </div>
 
-<div class="p-40 flex flex-col gap-3">
+<div class="p-44 flex flex-col gap-3">
     <h2 class="text-4xl font-bold text-gray-800 mb-4">Comments</h2>
     <!-- Add Comment Form -->
     @auth
@@ -27,7 +32,7 @@
         @csrf
         <textarea name="content" rows="4" class="w-full border-gray-300 rounded-lg p-3" placeholder="Write your comment here..."></textarea>
         <div class="flex justify-end">
-            <button type="submit" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg">Add Comment</button>
+            <button type="submit" class="mt-4 bg-purple text-white px-4 py-4 hover:bg-dark-purple transition-color duration-300 rounded-lg text-xl">Add Comment</button>
         </div>
     </form>
     @else
@@ -36,9 +41,9 @@
 
     <!-- Display Comments -->
     @foreach ($post->comments as $comment)
-        <div class="mb-4 border-l-4 border-blue-500 pl-2 flex flex-col gap-1">
-            <p class="text-gray-800 font-bold">{{ $comment->user->name }}</p>
-            <p class="text-gray-600">{{ $comment->content }}</p>
+        <div class="mb-4 border-l-4 border-purple pl-2 flex flex-col gap-1">
+            <p class="text-gray-800 font-bold text-xl">{{ $comment->user->name }}</p>
+            <p class="text-gray-600 text-lg mt-1">{{ $comment->content }}</p>
             <p class="text-sm text-gray-500 mt-2">{{ $comment->created_at->diffForHumans() }}</p>
         </div>
     @endforeach

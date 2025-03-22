@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Support\Str;
 
 class PostsController extends Controller
 {
@@ -19,10 +20,14 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('blog.index')
-            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
-    }
+{
+    $posts = Post::orderBy('updated_at', 'DESC')->get()->map(function ($post) {
+        $post->description = Str::words($post->description, 80); // Limit description to 100 words
+        return $post;
+    });
+
+    return view('blog.index')->with('posts', $posts);
+}
 
     /**
      * Show the form for creating a new resource.

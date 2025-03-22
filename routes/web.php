@@ -5,6 +5,8 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\MyPostsController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +38,8 @@ Route::get('/about', function () {
 Route::get('/myposts', [MyPostsController::class, 'index'])->name('myposts')->middleware('auth');
 
 Route::post('/posts/{postId}/comments', [CommentController::class, 'store'])->name('comments.store');
+
+
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index')->middleware('auth');
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send')->middleware('auth');
 

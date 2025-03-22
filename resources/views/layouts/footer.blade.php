@@ -1,4 +1,4 @@
-<footer class="bg-gray-800 py-20 mt-20">
+<footer class="bg-dark-purple py-20 mt-20">
     <div class="sm:grid grid-cols-3 w-4/5 pb-10 m-auto border-b-2 border-gray-700">
         <div>
             <h3 class="text-l sm:font-bold text-gray-100">
@@ -52,22 +52,17 @@
             <ul class="py-4 sm:text-s pt-4 text-gray-400">
                 <li class="pb-1">
                     <a href="/">
-                        What we do
+                        <b>Email:</b> gamequest.support@gmail.com
                     </a>
                 </li>
                 <li class="pb-1">
                     <a href="/">
-                        Address
+                        <b>Phone:</b> +353 89 123 4567 
                     </a>
                 </li>
-                <li class="pb-1">
+                <li class="pb-1 mt-2">
                     <a href="/">
-                        Phone
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Contact
+                        Contact Us
                     </a>
                 </li>
             </ul>
@@ -79,26 +74,13 @@
             </h3>
 
             <ul class="py-4 sm:text-s pt-4 text-gray-400">
-                <li class="pb-1">
-                    <a href="/">
-                        Why we love tech
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why we love design
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why to use Laravel
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why PHP is the best
-                    </a>
-                </li>
+                @foreach ($latestPosts as $post)
+                    <li class="pb-1">
+                        <a href="/blog/{{ $post->slug }}" class="hover:underline hover:text-white">
+                            {{ $post->title }}
+                        </a>
+                    </li>
+                @endforeach
             </ul>
         </div>
     </div>

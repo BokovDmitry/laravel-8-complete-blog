@@ -9,7 +9,7 @@
                 </h1>
                 <a 
                     href="/blog"
-                    class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
+                    class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase hover:bg-gray-300 transition-colors duration-300 ease-in-out">
                     Read More
                 </a>
             </div>
@@ -18,7 +18,7 @@
 
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
-            <img src="https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg" width="700" alt="">
+            <img src="https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg" width="600" alt="gaming">
         </div>
 
         <div class="m-auto sm:m-auto text-left w-4/5 block">
@@ -27,16 +27,16 @@
             </h2>
             
             <p class="py-8 text-gray-500 text-s">
-                Or just wanna discuus a tough boss?
+                Or just wanna discuss a tough boss?
             </p>
 
-            <p class="font-extrabold text-gray-600 text-s pb-9">
+            <p class="font-extrabold text-gray-600 text-m pb-9">
                 Awards, New releases, Big Scandals, Global Gaming News and mucc much more here! 
             </p>
 
             <a 
                 href="/blog"
-                class="uppercase bg-purple text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+                class="uppercase bg-purple text-gray-100 text-lg font-extrabold py-3 px-8 rounded-3xl hover:bg-dark-purple transition-colors duration-300 ease-in-out">
                 Find Out More
             </a>
         </div>
@@ -69,12 +69,12 @@
             Blog
         </span>
 
-        <h2 class="text-4xl font-bold py-10">
+        <h2 class="text-5xl font-bold py-10">
             Recent Posts
         </h2>
 
         <p class="m-auto w-4/5 text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem saepe enim veritatis, eos temporibus quaerat facere consectetur qui.
+            Let's talk about the latest gaming news, releases, and more!
         </p>
     </div>
 
@@ -84,23 +84,23 @@
                 <p class="text-gray-600">No recent posts available.</p>
             @else
                 @foreach ($recentPosts as $post)
-                    <div class="flex flex-col justify-between bg-gray-200 p-2 rounded-lg w-1/3 min-w-[200px]">  
+                    <div class="flex flex-col justify-between items-center bg-gray-200 p-3 rounded-lg w-1/3">  
                         <img 
                         src="{{ asset('images/' . $post->image_path) }}" 
                         alt="{{ $post->title }}" 
                         class="w-full h-64 object-cover rounded-lg mb-4">
 
-                        <h3 class="text-xl font-bold py-4">
+                        <h3 class="text-2xl font-bold py-4">
                             {{ $post->title }}
                         </h3>
         
-                        <p class="text-gray-600">
+                        <p class="text-gray-600 text-lg">
                             {{ $post->description, 100 }}
                         </p>
         
                         <a 
                             href="/blog/{{ $post->slug }}"
-                            class="uppercase bg-blue-500 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl mt-8 hover:bg-blue-600 text-center">
+                            class="uppercase bg-purple border-gray-100 text-gray-100 text-base font-extrabold py-3 px-5 rounded-3xl mt-8 hover:bg-blue-600 text-center w-1/2 transition-colors duration-300 ease-in-out">
                             Find Out More
                         </a>
                     </div>

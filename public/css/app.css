@@ -39063,6 +39063,17 @@ video {
   object-fit: cover;
 }
 
+.background-image-contact {
+  position: relative;
+  width : 100vw;
+  height : 600px;
+  background-image: url('https://images.pexels.com/photos/33999/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  object-fit: cover;
+}
 
 .background-image {
   position: relative;

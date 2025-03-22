@@ -27,6 +27,7 @@
                 <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
                     <a class="no-underline hover:underline text-xl" href="/">Home</a>
                     <a class="no-underline hover:underline text-xl" href="/about">About Us</a>
+                    <a class="no-underline hover:underline text-xl" href="/contact">Contact Us</a>
                     <a class="no-underline hover:underline text-xl" href="/blog">Blog</a>
                     @guest
                         <a class="no-underline hover:underline text-xl" href="{{ route('login') }}">{{ __('Login') }}</a>

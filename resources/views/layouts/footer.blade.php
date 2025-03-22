@@ -62,7 +62,7 @@
                 </li>
                 <li class="pb-1 mt-2">
                     <a href="/">
-                        Contact Us
+                        <a href="/contact" class="hover:underline hover:text-white">Contact Us</a>
                     </a>
                 </li>
             </ul>

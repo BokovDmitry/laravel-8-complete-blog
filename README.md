@@ -1,6 +1,18 @@
 ## Laravel 8 Complete Blog
+🎮 My Gaming Blog
 
-This repository is linked to [this youtube video](https://www.youtube.com/watch?v=HKJDLXsTr8A&t=4710s) where I show you how to create a complete blog in Laravel 8 using best practices.
+Welcome to <b>Game</b> Quiz, the best gaming blog out there! This is a space where I share my thoughts, reviews, and insights about the latest video games, industry trends, and gaming culture. Whether it's deep dives into game mechanics, personal experiences, or news updates, you'll find engaging content for gamers of all kinds.
+🔥 What to Expect
+
+    Honest game reviews 🎭
+
+    News and updates on the gaming industry 📰
+
+    Tips, tricks, and guides 🕹️
+
+    Personal experiences and opinions 🎙️
+
+Stay tuned for exciting content, and feel free to share your thoughts in the comments! 🚀
 
 •	Author: Dmytro Bokov <br>
 
@@ -20,7 +32,7 @@ php artisan cache:clear && php artisan config:clear
 php artisan serve
 ```
 
-Setting up mailhog: <br>
+# Setting up mailhog: <br>
 •	Linux
 ```
 brew install mailhog
@@ -33,20 +45,20 @@ chmod +x MailHog_linux_amd64
 sudo mv MailHog_linux_amd64 /usr/local/bin/mailhog
 ```
 
-Run Mailhog:
+# Run Mailhog:
 ```
 mailhog
 ```
 
 ## Before starting <br>
-Create a database <br>
+# Create a database <br>
 ```
 mysql
 create database laravelblog;
 exit;
 ```
 
-Setup your database credentials in the .env file <br>
+# Setup your database credentials in the .env file <br>
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -56,7 +68,7 @@ DB_USERNAME={USERNAME}
 DB_PASSWORD={PASSWORD}
 ```
 
-Setup your contact credentials for "contact us" form in the .env file <br>
+# Setup your contact credentials for "contact us" form in the .env file <br>
 ```
 MAIL_MAILER=stmp
 MAIL_HOST=localhost
@@ -68,10 +80,7 @@ MAIL_FROM_ADDRESS={EMAIL}
 MAIL_FROM_NAME="GameQuest"
 ```
 
-Migrate the tables
+# Migrate the tables
 ```
 php artisan migrate
 ```
-
-## Contributing
-Do not hesitate to contribute to the project by adapting or adding features ! Bug reports or pull requests are welcome.

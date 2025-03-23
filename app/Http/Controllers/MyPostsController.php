@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post; // Assuming you have a Post model
+use App\Models\Post;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 
 class MyPostsController extends Controller
@@ -20,6 +21,11 @@ class MyPostsController extends Controller
 
         // Fetch posts written by the logged-in user
         $posts = Post::where('user_id', $userId)->get();
+
+        $posts->transform(function ($post) {
+            $post->description = Str::words($post->description, 50);
+            return $post;
+        });
 
         // Return the view with the user's posts
         return view('myposts.index', compact('posts'));

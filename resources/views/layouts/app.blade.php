@@ -30,6 +30,7 @@
                     <a class="block no-underline hover:underline text-xl py-2 px-4 sm:py-0" href="/about">About Us</a>
                     <a class="block no-underline hover:underline text-xl py-2 px-4 sm:py-0" href="/contact">Contact</a>
                     <a class="block no-underline hover:underline text-xl py-2 px-4 sm:py-0" href="/blog">Posts</a>
+                    <a class="block no-underline hover:underline text-xl py-2 px-4 sm:py-0" href="/myposts">My Posts</a>
                     @auth
                         <!-- Logout Button -->
                         <form method="POST" action="{{ route('logout') }}" class="inline">

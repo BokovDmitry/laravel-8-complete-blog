@@ -30,11 +30,14 @@
                     </a>
         
                     @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
-                        <span class="float-right">
+                        <span class="float-right p-2">
                             <a 
                                 href="/blog/{{ $post->slug }}/edit"
-                                class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
-                                Edit
+                                class="text-gray-700 italic pb-1 border-b-2 transition-all duration-300"
+                            style="transition: font-size 0.3s;" 
+                            onmouseover="this.style.fontSize='1.1rem'" 
+                            onmouseout="this.style.fontSize='1rem'">
+                            Edit
                             </a>
                         </span>
         
@@ -46,7 +49,7 @@
                                 @method('delete')
         
                                 <button
-                                    class="text-red-500 pr-3"
+                                    class="text-red-500 pr-3 border-2 border-red-500 rounded-lg p-2 mr-2 hover:bg-red-500 hover:text-gray-100 transition-colors duration-300"
                                     type="submit">
                                     Delete
                                 </button>

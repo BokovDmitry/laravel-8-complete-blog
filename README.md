@@ -4,13 +4,13 @@
 Welcome to <b>Game</b> Quiz, the best gaming blog out there! This is a space where I share my thoughts, reviews, and insights about the latest video games, industry trends, and gaming culture. Whether it's deep dives into game mechanics, personal experiences, or news updates, you'll find engaging content for gamers of all kinds.
 🔥 What to Expect
 
-    Honest game reviews 🎭
+   • Honest game reviews 🎭
 
-    News and updates on the gaming industry 📰
+   • News and updates on the gaming industry 📰
 
-    Tips, tricks, and guides 🕹️
+   • Tips, tricks, and guides 🕹️
 
-    Personal experiences and opinions 🎙️
+   • Personal experiences and opinions 🎙️
 
 Stay tuned for exciting content, and feel free to share your thoughts in the comments! 🚀
 

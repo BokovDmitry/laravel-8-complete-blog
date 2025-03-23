@@ -24,7 +24,7 @@
     </p>
 </div>
 
-<div class="p-44 flex flex-col gap-3">
+<div class="px-10 m-auto py-20 mt-20 flex flex-col gap-3 sm:p-44">
     <h2 class="text-4xl font-bold text-gray-800 mb-4">Comments</h2>
     <!-- Add Comment Form -->
     @auth

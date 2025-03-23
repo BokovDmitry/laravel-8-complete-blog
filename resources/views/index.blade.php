@@ -79,12 +79,12 @@
     </div>
 
     <div class=" w-4/5 m-auto p-10">
-        <div class="m-auto pt-4 pb-16 w-100 sm:m-auto flex wrap gap-5">
+        <div class="m-auto pt-4 pb-16 w-100 sm:m-auto flex flex-wrap gap-5">
             @if ($recentPosts->isEmpty())
                 <p class="text-gray-600">No recent posts available.</p>
             @else
                 @foreach ($recentPosts as $post)
-                    <div class="flex flex-col justify-between items-center bg-gray-200 p-3 rounded-lg w-1/3">  
+                    <div class="flex flex-col justify-between items-center bg-gray-200 p-3 rounded-lg w-full md:w-1/3">  
                         <img 
                         src="{{ asset('images/' . $post->image_path) }}" 
                         alt="{{ $post->title }}" 

@@ -20,7 +20,7 @@
         </div>
     @endif
 
-    <form action="{{ route('contact.send') }}" method="POST" class="bg-white shadow-md rounded p-15 mb-4 flex flex-col gap-6 w-1/2 mx-auto border-2 border-purple rounded-xl">
+    <form action="{{ route('contact.send') }}" method="POST" class="bg-white shadow-md rounded p-5 lg:p-15 mb-4 flex flex-col gap-6 w-full lg:w-1/2 mx-auto border-2 border-purple rounded-xl">
         @csrf
         <div class="mb-4">
             <label for="subject" class="block text-gray-700 text-xl font-bold mb-2">Subject</label>

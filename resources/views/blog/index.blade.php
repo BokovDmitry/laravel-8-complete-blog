@@ -11,7 +11,7 @@
 
 @if (session()->has('message'))
     <div class="w-4/5 m-auto mt-10 pl-2">
-        <p class="w-2/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4">
+        <p class="w-2/6 mb-4 text-gray-50 bg-green-500 rounded-2xl px-2 py-4">
             {{ session()->get('message') }}
         </p>
     </div>
@@ -45,34 +45,37 @@
                 {{ $post->description }}
             </p>
 
-            <a href="/blog/{{ $post->slug }}" class="uppercase bg-purple text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+            <a href="/blog/{{ $post->slug }}" class="uppercase bg-purple text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl hover:bg-dark-purple transition-colors duration-300">
                 Keep Reading
             </a>
 
             @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
-                <span class="float-right">
-                    <a 
-                        href="/blog/{{ $post->slug }}/edit"
-                        class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
-                        Edit
-                    </a>
-                </span>
+                    <span class="float-right p-2">
+                        <a 
+                            href="/blog/{{ $post->slug }}/edit"
+                            class="text-gray-700 italic pb-1 border-b-2 transition-all duration-300"
+                            style="transition: font-size 0.3s;" 
+                            onmouseover="this.style.fontSize='1.1rem'" 
+                            onmouseout="this.style.fontSize='1rem'">
+                            Edit
+                        </a>
+                    </span>
 
-                <span class="float-right">
-                     <form 
-                        action="/blog/{{ $post->slug }}"
-                        method="POST">
-                        @csrf
-                        @method('delete')
+                    <span class="float-right">
+                         <form 
+                            action="/blog/{{ $post->slug }}"
+                            method="POST">
+                            @csrf
+                            @method('delete')
 
-                        <button
-                            class="text-red-500 pr-3"
-                            type="submit">
-                            Delete
-                        </button>
+                            <button
+                                class="text-red-500 pr-3 border-2 border-red-500 rounded-lg p-2 mr-2 hover:bg-red-500 hover:text-gray-100 transition-colors duration-300"
+                                type="submit">
+                                Delete
+                            </button>
 
-                    </form>
-                </span>
+                        </form>
+                    </span>
             @endif
         </div>
     </div>    

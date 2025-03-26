@@ -16111,6 +16111,18 @@ video {
 .text-6xl {
   font-size: 4rem;
 }
+.text-7xl {
+  font-size: 6em;
+}
+.text-8xl {
+  font-size: 9em;
+}
+.text-9xl {
+  font-size: 11em;
+}
+.text-10xl {
+  font-size: 13em;
+}
 
 .leading-3 {
   line-height: .75rem;
@@ -39082,7 +39094,7 @@ video {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 600px;
+  height: 80vh;
 }
 
 .background-image::before {
@@ -54397,6 +54409,18 @@ video {
 
   .sm\:text-6xl {
     font-size: 4rem;
+  }
+  .sm\:text-7xl {
+    font-size: 6rem;
+  }
+  .sm\:text-8xl {
+    font-size: 8rem;
+  }
+  .sm\:text-9xl {
+    font-size: 8rem;
+  }
+  .sm\:text-10xl {
+    font-size: 10rem;
   }
 
   .sm\:leading-3 {

@@ -17,32 +17,32 @@
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
     <div id="app">
-        <header class="bg-dark-purple py-6">
+        <header class="{{ request()->is('blog*', 'login', 'register', 'myposts') ? 'relative bg-dark-purple' : 'absolute bg-transparent' }} py-6 w-full z-50 sm:bg-transparent bg-dark-purple">
             <!-- Logo and Navigation Links -->
             <div class="container mx-auto flex justify-between items-center px-4">
                 <!-- Logo -->
-                <a href="{{ url('/') }}" class="text-2xl font-semibold text-gray-100 no-underline">
+                <a href="{{ url('/') }}" class="text-3xl font-semibold text-gray-100 no-underline">
                     {{ config('app.name', 'GameQuest') }}
                 </a>
                 <!-- Navigation Links -->
                 <nav id="menu" class="hidden sm:flex flex-col sm:flex-row sm:space-x-4 text-gray-300 text-sm sm:text-base">
-                    <a class="block no-underline hover:underline text-xl py-2 px-4" href="/">Home</a>
-                    <a class="block no-underline hover:underline text-xl py-2 px-4 " href="/about">About Us</a>
-                    <a class="block no-underline hover:underline text-xl py-2 px-4 " href="/contact">Contact</a>
-                    <a class="block no-underline hover:underline text-xl py-2 px-4 " href="/blog">Posts</a>
-                    <a class="block no-underline hover:underline text-xl py-2 px-4 " href="/myposts">My Posts</a>
+                    <a class="block no-underline hover:underline text-2xl py-2 px-4" href="/">Home</a>
+                    <a class="block no-underline hover:underline text-2xl py-2 px-4 " href="/about">About Us</a>
+                    <a class="block no-underline hover:underline text-2xl py-2 px-4 " href="/contact">Contact</a>
+                    <a class="block no-underline hover:underline text-2xl py-2 px-4 " href="/blog">Posts</a>
+                    <a class="block no-underline hover:underline text-2xl py-2 px-4 " href="/myposts">My Posts</a>
                     @auth
                         <!-- Logout Button -->
-                        <span class="block text-xl py-2 px-4 font-bold">{{ Auth::user()->name }}</span>
+                        <span class="block text-2xl py-2 px-4 font-bold">{{ Auth::user()->name }}</span>
                         <form method="POST" action="{{ route('logout') }}" class="inline">
                             @csrf
-                            <button type="submit" class="block no-underline text-red-500 border-2 border-red-500 hover:bg-red-500 hover:text-white text-xl py-1 rounded-md px-2 transition-colors duration-300">
+                            <button type="submit" class="block no-underline text-red-500 border-2 border-red-500 hover:bg-red-500 hover:text-white text-2xl py-1 rounded-md px-2 transition-colors duration-300">
                                 Logout
                             </button>
                         </form>
                     @else
-                        <a class="block no-underline hover:underline text-xl py-2 px-4 sm:py-0" href="/login">Login</a>
-                        <a class="block no-underline hover:underline text-xl py-2 px-4 sm:py-0" href="/register">Register</a>
+                        <a class="block no-underline hover:underline text-2xl py-2 px-4" href="/login">Login</a>
+                        <a class="block no-underline hover:underline text-2xl py-2 px-4" href="/register">Register</a>
                     @endauth
                 </nav>
 
@@ -52,7 +52,7 @@
                     </svg>
                 </button>
             </div>
-            <nav id="menu-mobile" class="mt-10 sm:hidden sm:flex flex-col sm:flex-row sm:space-x-4 text-gray-300 text-sm sm:text-base">
+            <nav id="menu-mobile" class="mt-10 sm:hidden sm:flex flex-col sm:flex-row sm:space-x-4 text-gray-300 text-sm sm:text-base bg-dark-purple">
                 <a class="block no-underline hover:underline text-xl py-2 px-4 " href="/">Home</a>
                 <a class="block no-underline hover:underline text-xl py-2 px-4 " href="/about">About Us</a>
                 <a class="block no-underline hover:underline text-xl py-2 px-4 " href="/contact">Contact</a>

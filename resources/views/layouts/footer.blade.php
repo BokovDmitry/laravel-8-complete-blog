@@ -51,19 +51,19 @@
 
             <ul class="py-4 sm:text-s pt-4 text-gray-400">
                 <li class="pb-1">
-                    <a href="/">
+                    <p href="/">
                         <b>Email:</b> gamequest.support@gmail.com
-                    </a>
+                    </p>
                 </li>
                 <li class="pb-1">
-                    <a href="/">
+                    <p href="/">
                         <b>Phone:</b> +353 89 123 4567 
-                    </a>
+                    </p>
                 </li>
                 <li class="pb-1 mt-2">
-                    <a href="/">
+                    <p href="/">
                         <a href="/contact" class="hover:underline hover:text-white">Contact Us</a>
-                    </a>
+                    </p>
                 </li>
             </ul>
         </div>

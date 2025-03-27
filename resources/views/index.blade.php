@@ -26,37 +26,99 @@
         </div>
     </div>
 
-    <div class="relative w-full h-96 bg-black">
-    
-        <div class="inset-0 flex items-center justify-start h-full bg-cover bg-center" >
-        <h2 class="sm:text-6xl text-4xl w-full text-gray-300 uppercase text-center"
-        style="font-family: 'Anton', sans-serif;">Latest Gaming News</h2>
-    </div>
-</div>
-<div class="relative w-full h-96 bg-black">
-    
-    <div class="flex items-center justify-start h-full bg-cover bg-center">
-    <h2 class="sm:text-6xl text-4xl w-full text-gray-300 uppercase text-center"
-    style="font-family: 'Anton', sans-serif;">Biggest Scandals</h2>
-</div>
-</div>
-<div class="relative w-full h-96 bg-black">
-    
-    <div class="inset-0 flex items-center justify-start h-full bg-cover bg-center" >
-    <h2 class="sm:text-6xl text-4xl  w-full text-gray-300 uppercase text-center"
-    style="font-family: 'Anton', sans-serif;"    >Speedrun Records</h2>
-</div>
-</div>
-<div class="relative w-full h-96 bg-black">
-    
-    <div class="inset-0 flex items-center justify-start h-full bg-cover bg-center" >
-    <h2 class="sm:text-6xl text-4xl  w-full text-gray-300 uppercase text-center"
-    style="font-family: 'Anton', sans-serif;">Game Reviews</h2>
-</div>
-</div>
+    <style>
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
 
-{{-- -------------------------------------------------------------------- --}}
-</div>
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-left {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .slide-right {
+            opacity: 0;
+            transform: translateX(100%);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+
+    <div class="relative w-full h-48 bg-black slide-left">
+        <div class="inset-0 flex items-center justify-start h-full bg-cover bg-center">
+            <h2 class="sm:text-6xl text-4xl w-full text-gray-300 uppercase text-center"
+                style="font-family: 'Anton', sans-serif;">Latest Gaming News</h2>
+        </div>
+    </div>
+    <div class="relative w-full h-48 bg-black slide-right">
+        <div class="flex items-center justify-start h-full bg-cover bg-center">
+            <h2 class="sm:text-6xl text-4xl w-full text-gray-300 uppercase text-center"
+                style="font-family: 'Anton', sans-serif;">Biggest Scandals</h2>
+        </div>
+    </div>
+    <div class="relative w-full h-48 bg-black slide-left">
+        <div class="inset-0 flex items-center justify-start h-full bg-cover bg-center">
+            <h2 class="sm:text-6xl text-4xl w-full text-gray-300 uppercase text-center"
+                style="font-family: 'Anton', sans-serif;">Speedrun Records</h2>
+        </div>
+    </div>
+    <div class="relative w-full h-48 bg-black slide-right">
+        <div class="inset-0 flex items-center justify-start h-full bg-cover bg-center">
+            <h2 class="sm:text-6xl text-4xl w-full text-gray-300 uppercase text-center"
+                style="font-family: 'Anton', sans-serif;">Game Reviews</h2>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.slide-left, .slide-right');
+    
+            // Debug: Log the elements being observed
+            console.log('Elements to observe:', elements);
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // Debug: Log each entry's intersection status
+                    console.log('Entry:', entry.target, 'Is intersecting:', entry.isIntersecting);
+    
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { rootMargin: '0px 0px -50px 0px', threshold: 0 });
+    
+            elements.forEach(element => {
+                observer.observe(element);
+                // Debug: Log bounding box of each element
+                console.log('Bounding box:', element.getBoundingClientRect());
+            });
+        });
+    </script>
+
+    {{-- -------------------------------------------------------------------- --}}
     <div class="text-center py-15">
         <span class="uppercase text-s text-gray-400">
             Blog
